@@ -1,34 +1,10 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 <h1>Hello , To {{title}}</h1>
-<h3>Data Binding from source to view by Interpolation </h3>
-<p>Price : {{price}}</p>
-<p>Married : {{isMarried}}</p>
-<!-- <p>Family : {{family}}</p> -->
-<p>User : {{user | json}}</p>
-<p>User Info : {{showUserInfo()}}</p>
 
-<h3>Data Binding from source to view by Property Binding</h3>
+<!-- <app-twoway-databinding></app-twoway-databinding> -->
 
-<p>Price: <span [innerHTML]="price"></span></p>
-<p>Married: <span [innerText]="isMarried"></span></p>
-<img [src]="imgPath" alt="" srcset="">
-
-<h3>Style Binding from source to view</h3>
-
-<p [style.color]="'green'">FullStack Web Learning</p>
-<p [style.color]="color.third" [style.text-align]="'center'" [style.font-size.px]="'24'">Frontend Development</p>
-<p [style.color]="isError ? 'red' :'green'" [style.text-align]="'center'" [style.font-size.px]="'24'">I am Just A Validation</p>
-
-<h3>Class Binding from source to view</h3>
-
-<p [className]="'green-color p-all'">Today is Sunday</p>
-<p [className]="isError ? 'red-color' :'green-color'">Class Validation</p>
-<p [className]="hasError('') ? 'green-color' :'red-color'">Class method Validation</p>
-
-
-<h3>Class Binding</h3>
-
-<button class="btn btn-primary" (click)="changeStatus()">Change Marital Status</button>
+<!-- dynamically expose the route -->
+<router-outlet></router-outlet>
 
 <app-footer></app-footer>
